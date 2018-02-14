@@ -1,0 +1,29 @@
+<h2>Add Product</h2>
+
+<form name="addProductForm" ng-submit="$ctrl.onFormSubmit($event)">
+    <div>
+        <label for="title">Title</label>
+       <input  ng-model="$ctrl.newProduct.title" required type="text" name="title">
+        </div>
+    <div>
+            <label for="company">Title</label>
+            <input  type="text" ng-model="$ctrl.newProduct.company" name="company">
+    </div>
+
+    <div>
+            <label for="price">Price</label>
+            <input type="number"ng-model="$ctrl.newProduct.price"  name="price">
+    </div>
+
+    <div>
+            <label for="imgUrl">Image url</label>
+            <input type="text" ng-model="$ctrl.newProduct.imagUrl" name="imgUrl">
+    </div>   
+
+    <div>
+        <input type="submit" value="Add Product">
+        <button type="reset" value="Reset">
+                {{$ctrl.newProduct}}
+    </div>
+
+</form>
